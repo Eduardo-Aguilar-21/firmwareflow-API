@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Proyecto</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+<h1>Editar Proyecto</h1>
+<form th:action="@{/api/projects/edit-project}" method="put">
+  <!-- Campo oculto para enviar el ID del proyecto -->
+  <input type="hidden" th:field="${project.id}" />
+
+  <label for="name">Nombre:</label>
+  <!-- Campo de texto para el nombre, con el valor del nombre del proyecto -->
+  <input type="text" id="name" name="name" th:value="${project.name}" />
+
+  <!-- Botón para guardar los cambios -->
+  <button type="submit">Guardar Cambios</button>
+</form>
+</body>
+</html>

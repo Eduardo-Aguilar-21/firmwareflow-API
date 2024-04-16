@@ -1,0 +1,2 @@
+            <button onclick="redirectToEditProject()">Editar</button>
+            <button th:action="@{/api/projects/edit-project-view/{id}(id=${project.id})}">Editar</button>

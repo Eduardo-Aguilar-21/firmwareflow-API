@@ -1,0 +1,47 @@
+/* styles.css */
+body {
+    background-color: black; /* Fondo negro */
+    color: white; /* Letras blancas */
+    font-family: Arial, sans-serif; /* Fuente */
+}
+
+h1 {
+    text-align: center; /* Centrar el título */
+}
+
+table {
+    width: 50%; /* Ancho de la tabla */
+    margin: 20px auto; /* Centrar la tabla */
+    border-collapse: collapse; /* Colapso de bordes */
+}
+
+th, td {
+    padding: 8px; /* Espacio interno */
+    border-bottom: 1px solid white; /* Borde inferior blanco */
+    text-align: left; /* Alineación izquierda */
+}
+
+th {
+    background-color: #333; /* Fondo gris oscuro para encabezados */
+}
+
+tr:nth-child(even) {
+    background-color: #666; /* Fondo gris oscuro para filas pares */
+}
+
+.add-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    width: 30%;
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color de texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre él */
+}
+
+.add-button:hover {
+    background-color: #0056b3; /* Color de fondo azul más oscuro al pasar el ratón */
+}

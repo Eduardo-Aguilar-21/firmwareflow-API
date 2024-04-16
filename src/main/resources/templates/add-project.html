@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Proyecto</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+<h1>Agregar Proyecto</h1>
+<form th:action="@{/api/projects/add-project}" method="post">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name">
+    <button type="submit">Guardar</button>
+</form>
+</body>
+</html>

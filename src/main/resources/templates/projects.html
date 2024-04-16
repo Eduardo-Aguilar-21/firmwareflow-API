@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+
+    <script th:inline="javascript">
+    function redirectToAddProject() {
+        var url = '/api/projects/add-project-view';
+        window.location.href = url;
+    }
+
+</script>
+</head>
+<body>
+<h1>Projects</h1>
+<button type="button" onclick="redirectToAddProject()" class="add-button">Agregar Proyecto</button>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="project : ${projects}">
+        <td th:text="${project.id}"></td>
+        <td th:text="${project.name}"></td>
+        <td>
+            <a th:href="@{/api/projects/edit-project-view/{id}(id=${project.id})}" class="edit-button">Editar</a>
+
+            <button>Eliminar</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
