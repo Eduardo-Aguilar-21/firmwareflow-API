@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Agregar Versión</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+<h1>Agregar Versión</h1>
+<form th:action="@{/api/versions/add-version}" method="post">
+  <label for="name">Nombre:</label>
+  <input type="text" id="name" name="name">
+  <label for="projectId">ID del Proyecto:</label>
+  <input type="text" id="projectId" name="projectId">
+  <button type="submit">Guardar</button>
+</form>
+</body>
+</html>

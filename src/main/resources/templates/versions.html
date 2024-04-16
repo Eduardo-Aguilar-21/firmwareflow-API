@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Versions</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+<h1>Versions</h1>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Project ID</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="version : ${versions}">
+    <td th:text="${version.id}"></td>
+    <td th:text="${version.name}"></td>
+    <td th:text="${version.projectModel.id}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Versión</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+<h1>Editar Versión</h1>
+<form th:action="@{/api/versions/edit-version}" method="put">
+    <!-- Campo oculto para enviar el ID de la versión -->
+    <input type="hidden" th:field="${version.id}" />
+
+    <label for="name">Nombre:</label>
+    <!-- Campo de texto para el nombre, con el valor del nombre de la versión -->
+    <input type="text" id="name" name="name" th:value="${version.name}" />
+
+    <!-- Campo de texto para el ID del proyecto -->
+    <label for="projectId">ID del Proyecto:</label>
+    <input type="text" id="projectId" name="projectId" th:value="${version.projectModel.id}" />
+
+    <!-- Botón para guardar los cambios -->
+    <button type="submit">Guardar Cambios</button>
+</form>
+</body>
+</html>
